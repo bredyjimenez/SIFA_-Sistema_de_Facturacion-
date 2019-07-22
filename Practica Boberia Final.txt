@@ -1,0 +1,101 @@
+Practica Boberia Final
+1)-Crear una base de datos que se llame SIFA(Sistema de facturacion)
+2)-Crear las siguientes tablas
+
+---Nacionalidades---
+id int que se autoincremente llave primaria
+nombre varchar unica
+estado bit
+
+---Cliente----
+***id int que se autoincremente llave primaria
+***nombre varchar
+***apellido varchar
+***cedula char unica
+***fecha_nacimiento date
+***telefono char
+***direccion varchar
+***genero char
+***email varchar
+***id_nacionalidad int llave secundaria
+***estado bit
+
+---Usuario---
+***id int que se autoincremente llave primaria
+***id_empleado int llave secundaria
+***nombre_usuario varchar unica
+***contrasena varchar(investiguen como encriptar esto)
+
+---Roles---
+***id int que se autoincremente llave primaria
+***nombre varchar unica (admin, facturador)
+***estato bit
+
+---Empleado----
+***id int que se autoincremente llave primaria
+***nombre varchar
+***apellido varchar
+***cedula char unica
+***fecha_nacimiento date
+***telefono char
+***direccion varchar
+***genero char
+***email varchar
+***id_nacionalidad int llave secundaria
+***id_rol int llave secundaria
+***fecha_entrada date
+***fecha_salida date 
+***condicion char
+
+---Suplidor---
+***id int que se autoincremente llave primaria
+***nombre_compania varchar unica
+***nombre_contacto varchar
+***telefono_compania char
+***telefono_contacto char
+***email varchar
+
+
+---Producto---
+***id int que se autoincremente llave primaria
+***nombre varchar unica
+***id_suplidor int llave secundaria
+***precio decimal
+***unidad_en_almacen int
+***descontinuado bit
+
+---Factura---
+***id int que se autoincremente llave primaria
+***id_cliente int llave secundaria
+***id_empleado_registro int llave secundaria
+***fecha_hora datetime
+***total_factura decimal
+***itbis_actual
+
+---DetalleFactura---
+***id int que se autoincremente llave primaria
+***id_factura int llave secundaria
+***id_producto int llave secundaria
+***precio decimal
+***cantidad int
+
+3)-crear un mantenimiento para todas las tablas anteriores menos la de Factura y DetalleFactura en asp
+
+4)-crear un login
+
+5)-crear la pantalla de facturacion que debe se buscar los productos que no esten descontinuados,
+no se puede agregar dos veces el mismo producto en la factura.
+no se puede agregar una cantidad mayor a lo que esta en almacen.
+debe mostrarme cuanto hay en almacen de ese producto.
+cada ves que se facture un producto debe de quitarlo del almacen.
+(opcional buscar la manera de devolver factura)
+
+6)- crear una pantalla para cuando se compre un producto se agregue a la cantidad que existe en almacen
+
+7)- usar todas las validaciones ya creadas por ustedes y usar las validaciones de asp
+
+8)- usar bootstrap
+
+9)- al momento de terminar de factura mostrar la factura en un reporte
+
+10)- hacer una pantalla para poder generar factura por su numero de factura
