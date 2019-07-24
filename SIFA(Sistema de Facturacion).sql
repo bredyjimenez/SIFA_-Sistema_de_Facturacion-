@@ -175,11 +175,11 @@ as
 if(@opcion='I')
 	begin
 		insert into Usuario(id_empleado, nombre_usuario, contrasena)
-		values (@id_empleado, @nombre_usuario, @contrasena)
+		values (@id_empleado, @nombre_usuario, ENCRYPTBYPASSPHRASE('password', @contrasena))
 	end
 else if(@opcion='U')
 	begin
-		update Usuario set id_empleado = @id_empleado, nombre_usuario = @nombre_usuario, contrasena = @contrasena
+		update Usuario set id_empleado = @id_empleado, nombre_usuario = @nombre_usuario, contrasena = ENCRYPTBYPASSPHRASE('password', @contrasena)
 		where id = @id
 	end
 else if(@opcion='D')
@@ -339,3 +339,38 @@ else if(@opcion='D')
 		delete from Cliente where id = @id
 	end
 go
+
+
+-- Inserting records
+
+-- Inserting recors in table Nacionalidades
+insert into Nacionalidades(nombre, estado)
+values ('Dominicana', 1)
+go
+
+-- Inserting recors in table Empleado
+insert into Empleado(nombre, apellido, cedula, fecha_nacimiento, telefono, direccion, genero, email,
+					id_nacionalidad, id_rol, fecha_entrada, condicion)
+values('Adrian', 'Jiménez', '22301304378', '01-03-1990', '8296033232', 'Calle Marquez No. 7, El Almirante',
+		'm', 'adrianjpz@hotmail.com', 1, 1, '01-11-2015', 'a')
+go
+
+-- Inserting recors in table Usuario
+insert into Usuario(id_empleado, nombre_usuario, contrasena)
+values(1, 'adrian', ENCRYPTBYPASSPHRASE('password', '2893'))
+go
+
+
+
+
+
+
+
+
+select * from Usuario
+
+select * from Empleado
+
+select * from roles
+
+select * from Nacionalidades
