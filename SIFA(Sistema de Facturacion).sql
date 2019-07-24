@@ -358,6 +358,9 @@ go
 -- Inserting recors in table Usuario
 insert into Usuario(id_empleado, nombre_usuario, contrasena)
 values(1, 'adrian', ENCRYPTBYPASSPHRASE('password', '2893'))
+
+-- Consultar campo encriptado en la tabla Usuario
+select nombre_usuario, convert(varchar(40), DECRYPTBYPASSPHRASE('password', contrasena)) from Usuario
 go
 
 
