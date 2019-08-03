@@ -1,0 +1,45 @@
+﻿body {
+}
+* {
+    margin:0px;
+    padding:0px;
+}
+#menu ul {
+    list-style:none;
+}
+    #menu ul li {
+        background-color:cornflowerblue;
+        border:solid 1px white;
+        width:120px;
+        height:35px;
+        text-align:center;
+        line-height:35px;
+        float:left;
+        position:relative;
+        border-radius:10px;
+    }
+        #menu ul li a {
+            text-decoration:none;
+            color:#fff;
+            display:block;
+        }
+            #menu ul li a:hover {
+                background-color: #ff6a00;
+                color: #fff;
+                border-radius: 10px;
+            }
+            /*#menu ul ul {
+                position:absolute;
+                display:none;
+            }*/
+    /*Ponerle color al menu que baja*/
+    /*#menu ul li > ul li {
+        background-color: #18e27f;
+        color: #edeef8;*/
+        /*border: solid 1px white;
+        border-radius: 10px;
+    }*/
+    #menu ul li:hover > ul {
+        display: block;
+        border-radius: 10px;
+    }

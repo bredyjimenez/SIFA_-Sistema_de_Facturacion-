@@ -14,7 +14,7 @@
             <asp:TextBox ID="txtNombreBusqueda" runat="server"></asp:TextBox>
                 <br />
                 <br />
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                 <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" />
             </asp:Panel>
         </div>
