@@ -14,11 +14,16 @@
                 <li><a href="#">FACTURAS</a></li>
                 <li><a href="#">DETALLES F</a></li>
                 <li><a href="#">PRODUCTOS</a></li>
+            <%--    <li><a href="#">PRODUCTOS</a>
+                                    <ul>
+                    <li><a href="#">CLIENTES</a></li>
+                </ul>
+                </li>--%>
                 <li><a href="#">CLIENTES</a></li>
                 <li><a href="#">SUPLIDORES</a></li>
                 <li><a href="#">NACIONALIDADES</a></li>
                 <li><a href="#">EMPLEADOS</a></li>
-                <li><a href="#">ROLES</a></li>
+                <li><a href="Roles.aspx">ROLES</a></li>
                 <li><a href="#">USUARIOS</a></li>
             </ul>
         </div>

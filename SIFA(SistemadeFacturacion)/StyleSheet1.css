@@ -28,17 +28,17 @@
                 color: #fff;
                 border-radius: 10px;
             }
-            /*#menu ul ul {
+            #menu ul ul {
                 position:absolute;
                 display:none;
-            }*/
+            }
     /*Ponerle color al menu que baja*/
-    /*#menu ul li > ul li {
+    #menu ul li > ul li {
         background-color: #18e27f;
-        color: #edeef8;*/
-        /*border: solid 1px white;
+        color: #edeef8;
+        border: solid 1px white;
         border-radius: 10px;
-    }*/
+    }
     #menu ul li:hover > ul {
         display: block;
         border-radius: 10px;

@@ -33,3 +33,4 @@ C:\Users\adria\Desktop\SIFA(SistemadeFacturacion)\SIFA(SistemadeFacturacion)\obj
 C:\Users\adria\Desktop\SIFA(SistemadeFacturacion)\SIFA(SistemadeFacturacion)\obj\Debug\SIFA(SistemadeFacturacion).csproj.CopyComplete
 C:\Users\adria\Desktop\SIFA(SistemadeFacturacion)\SIFA(SistemadeFacturacion)\obj\Debug\SIFA(SistemadeFacturacion).dll
 C:\Users\adria\Desktop\SIFA(SistemadeFacturacion)\SIFA(SistemadeFacturacion)\obj\Debug\SIFA(SistemadeFacturacion).pdb
+C:\Users\adria\Desktop\SIFA(SistemadeFacturacion)\SIFA(SistemadeFacturacion)\obj\Debug\SIFA(SistemadeFacturacion).csprojAssemblyReference.cache
