@@ -11,7 +11,7 @@ namespace SIFA_SistemadeFacturacion_
     public partial class Nacionalidades : System.Web.UI.Page
     {
         //Metodo limpiar
-        protected void Limpiar2(Panel p)
+        protected void Limpiar(Panel p)
         {
             foreach (var c in p.Controls)
             {
@@ -19,10 +19,6 @@ namespace SIFA_SistemadeFacturacion_
                 {
                     (c as TextBox).Text = "";
                 }
-                /*else if (c is DropDownList)
-                {
-                    (c as DropDownList).SelectedIndex = 0;
-                }*/
             }
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -32,7 +28,8 @@ namespace SIFA_SistemadeFacturacion_
 
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
-            Limpiar2(pCambio);
+            Limpiar(pCambio);
+            pCambio.Visible = true;
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -47,6 +44,7 @@ namespace SIFA_SistemadeFacturacion_
                 txtNombre.Text = registros["nombre"].ToString();
                 txtEstado.Text = registros["estado"].ToString();
                 txtNombreBusqueda.Text = "";
+                pCambio.Visible = true;
             }
             else
             {
@@ -60,7 +58,7 @@ namespace SIFA_SistemadeFacturacion_
             SqlDataSouerceNacionalidad.InsertParameters[1].DefaultValue = txtEstado.Text;
             SqlDataSouerceNacionalidad.Insert();
             Response.Write("<script>alert('Se guardo correctamente')</script>");
-            Limpiar2(pCambio);
+            Limpiar(pCambio);
             gvNacionalidades.DataBind();
         }
 

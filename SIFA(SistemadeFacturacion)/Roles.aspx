@@ -31,27 +31,7 @@
                     <asp:CheckBoxField DataField="estado" HeaderText="estado" SortExpression="estado" />
                 </Columns>
             </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" SelectCommand="SELECT * FROM [Roles]"></asp:SqlDataSource>
-        <p>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" DeleteCommand="DELETE FROM Roles WHERE (id = @id)" InsertCommand="INSERT INTO Roles(nombre, estado) VALUES (@nombre, @estado)" ProviderName="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString.ProviderName %>" SelectCommand="SELECT id, nombre, estado FROM Roles WHERE (id = @id)" UpdateCommand="UPDATE Roles SET nombre = @nombre, estado = @estado WHERE (id = @id)">
-                <DeleteParameters>
-                    <asp:Parameter Name="id" />
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="nombre" />
-                    <asp:Parameter Name="estado" />
-                </InsertParameters>
-                <SelectParameters>
-                    <asp:Parameter DefaultValue="" Name="id" />
-                </SelectParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="nombre" />
-                    <asp:Parameter Name="estado" />
-                    <asp:Parameter Name="id" />
-                </UpdateParameters>
-            </asp:SqlDataSource>
-            </p>
-        <asp:Panel ID="pCambio" runat="server">
+        <asp:Panel ID="pCambio" runat="server" Visible="false">
             <br />
             <asp:Label ID="Label2" runat="server" Text="Código: "></asp:Label>
             <asp:TextBox ID="txtCodigo" runat="server"></asp:TextBox>
@@ -76,6 +56,26 @@
         </asp:Panel>
         <p>
         </p>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" SelectCommand="SELECT * FROM [Roles]"></asp:SqlDataSource>
+        <p>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" DeleteCommand="DELETE FROM Roles WHERE (id = @id)" InsertCommand="INSERT INTO Roles(nombre, estado) VALUES (@nombre, @estado)" ProviderName="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString.ProviderName %>" SelectCommand="SELECT id, nombre, estado FROM Roles WHERE (id = @id)" UpdateCommand="UPDATE Roles SET nombre = @nombre, estado = @estado WHERE (id = @id)">
+                <DeleteParameters>
+                    <asp:Parameter Name="id" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="nombre" />
+                    <asp:Parameter Name="estado" />
+                </InsertParameters>
+                <SelectParameters>
+                    <asp:Parameter DefaultValue="" Name="id" />
+                </SelectParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="nombre" />
+                    <asp:Parameter Name="estado" />
+                    <asp:Parameter Name="id" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
+            </p>
     </form>
 </body>
 </html>

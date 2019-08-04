@@ -34,7 +34,7 @@
 
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" SelectCommand="SELECT * FROM [Nacionalidades]"></asp:SqlDataSource>
 
-            <asp:Panel ID="pCambio" runat="server">
+            <asp:Panel ID="pCambio" runat="server" Visible="false">
             <br />
                 <br />
             <asp:Label ID="Label2" runat="server" Text="Código: "></asp:Label>
@@ -60,7 +60,7 @@
         </asp:Panel>
         </div>
         <p>
-            &nbsp;</p>
+            </p>
         <asp:SqlDataSource ID="SqlDataSouerceNacionalidad" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" DeleteCommand="DELETE FROM Nacionalidades WHERE (id = @id)" InsertCommand="INSERT INTO Nacionalidades(nombre, estado) VALUES (@nombre, @estado)" ProviderName="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString.ProviderName %>" SelectCommand="SELECT id, nombre, estado FROM Nacionalidades WHERE (id = @id)" UpdateCommand="UPDATE Nacionalidades SET nombre = @nombre, estado = @estado WHERE (id = @id)">
             <DeleteParameters>
                 <asp:Parameter Name="id" />

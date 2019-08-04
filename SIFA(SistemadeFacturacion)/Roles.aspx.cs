@@ -38,11 +38,12 @@ namespace SIFA_SistemadeFacturacion_
             SqlDataReader registros;
             registros = (SqlDataReader)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
             if (registros.Read())
-            { 
+            {
                 txtCodigo.Text = registros["id"].ToString();
                 txtNombre.Text = registros["nombre"].ToString();
                 txtEstado.Text = registros["estado"].ToString();
                 txtNombreBusqueda.Text = "";
+                pCambio.Visible = true;
             }
             else
             {
@@ -53,6 +54,7 @@ namespace SIFA_SistemadeFacturacion_
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
             Limpiar2(pCambio);
+            pCambio.Visible = true;
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -75,6 +77,7 @@ namespace SIFA_SistemadeFacturacion_
             {
                 Response.Write("<script>alert('Se modifico el rol')</script>");
                 gvRoles.DataBind();
+
             }
             else
                 Response.Write("<script>alert('No existe el codigo')</script>");

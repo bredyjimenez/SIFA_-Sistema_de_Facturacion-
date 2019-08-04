@@ -71,6 +71,7 @@
     <Content Include="Nacionalidades.aspx" />
     <Content Include="Roles.aspx" />
     <Content Include="StyleSheet1.css" />
+    <Content Include="Suplidores.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +97,13 @@
     </Compile>
     <Compile Include="Roles.aspx.designer.cs">
       <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suplidores.aspx.cs">
+      <DependentUpon>Suplidores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suplidores.aspx.designer.cs">
+      <DependentUpon>Suplidores.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

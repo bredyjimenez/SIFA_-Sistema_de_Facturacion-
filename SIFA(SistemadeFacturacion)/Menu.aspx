@@ -20,7 +20,7 @@
                 </ul>
                 </li>--%>
                 <li><a href="#">CLIENTES</a></li>
-                <li><a href="#">SUPLIDORES</a></li>
+                <li><a href="Suplidores.aspx">SUPLIDORES</a></li>
                 <li><a href="Nacionalidades.aspx">NACIONALIDADES</a></li>
                 <li><a href="#">EMPLEADOS</a></li>
                 <li><a href="Roles.aspx">ROLES</a></li>
