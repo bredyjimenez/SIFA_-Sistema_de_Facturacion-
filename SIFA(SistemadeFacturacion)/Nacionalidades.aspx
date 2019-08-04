@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Roles.aspx.cs" Inherits="SIFA_SistemadeFacturacion_.Roles" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Nacionalidades.aspx.cs" Inherits="SIFA_SistemadeFacturacion_.Nacionalidades" %>
 
 <!DOCTYPE html>
 
@@ -11,48 +11,32 @@
         <div>
             <asp:Panel ID="pBusqueda" runat="server" DefaultButton="btnBuscar">
                 <br />
-                <asp:Label ID="Label5" runat="server" Text="MANTENIMIENTO DE ROLES"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="MANTENIMIENTO DE NACIONALIDADES"></asp:Label>
                 <br />
                 <br />
-            <asp:Label ID="Label1" runat="server" Text="Codigo: "></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Nombre: "></asp:Label>
             <asp:TextBox ID="txtNombreBusqueda" runat="server"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                 <asp:Button ID="btnNuevo" runat="server" Text="Nuevo" OnClick="btnNuevo_Click" />
+                <br />
+                <br />
             </asp:Panel>
-        </div>
-        <p>
-            </p>
-            <asp:GridView ID="gvRoles" runat="server" AutoGenerateColumns="False" CellPadding="3" AllowSorting="True" DataKeyNames="id" DataSourceID="SqlDataSource1">
+
+            <asp:GridView ID="gvNacionalidades" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                     <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
                     <asp:CheckBoxField DataField="estado" HeaderText="estado" SortExpression="estado" />
                 </Columns>
             </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" SelectCommand="SELECT * FROM [Roles]"></asp:SqlDataSource>
-        <p>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" DeleteCommand="DELETE FROM Roles WHERE (id = @id)" InsertCommand="INSERT INTO Roles(nombre, estado) VALUES (@nombre, @estado)" ProviderName="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString.ProviderName %>" SelectCommand="SELECT id, nombre, estado FROM Roles WHERE (id = @id)" UpdateCommand="UPDATE Roles SET nombre = @nombre, estado = @estado WHERE (id = @id)">
-                <DeleteParameters>
-                    <asp:Parameter Name="id" />
-                </DeleteParameters>
-                <InsertParameters>
-                    <asp:Parameter Name="nombre" />
-                    <asp:Parameter Name="estado" />
-                </InsertParameters>
-                <SelectParameters>
-                    <asp:Parameter DefaultValue="" Name="id" />
-                </SelectParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="nombre" />
-                    <asp:Parameter Name="estado" />
-                    <asp:Parameter Name="id" />
-                </UpdateParameters>
-            </asp:SqlDataSource>
-            </p>
-        <asp:Panel ID="pCambio" runat="server">
+
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" SelectCommand="SELECT * FROM [Nacionalidades]"></asp:SqlDataSource>
+
+            <asp:Panel ID="pCambio" runat="server">
             <br />
+                <br />
             <asp:Label ID="Label2" runat="server" Text="Código: "></asp:Label>
             <asp:TextBox ID="txtCodigo" runat="server"></asp:TextBox>
             <br />
@@ -74,8 +58,26 @@
             <br />
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Menu.aspx">Retornar</asp:HyperLink>
         </asp:Panel>
+        </div>
         <p>
-        </p>
+            &nbsp;</p>
+        <asp:SqlDataSource ID="SqlDataSouerceNacionalidad" runat="server" ConnectionString="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString %>" DeleteCommand="DELETE FROM Nacionalidades WHERE (id = @id)" InsertCommand="INSERT INTO Nacionalidades(nombre, estado) VALUES (@nombre, @estado)" ProviderName="<%$ ConnectionStrings:SIFAsistemadefacturacionConnectionString.ProviderName %>" SelectCommand="SELECT id, nombre, estado FROM Nacionalidades WHERE (id = @id)" UpdateCommand="UPDATE Nacionalidades SET nombre = @nombre, estado = @estado WHERE (id = @id)">
+            <DeleteParameters>
+                <asp:Parameter Name="id" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="nombre" />
+                <asp:Parameter Name="estado" />
+            </InsertParameters>
+            <SelectParameters>
+                <asp:Parameter Name="id" />
+            </SelectParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="nombre" />
+                <asp:Parameter Name="estado" />
+                <asp:Parameter Name="id" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
     </form>
 </body>
 </html>

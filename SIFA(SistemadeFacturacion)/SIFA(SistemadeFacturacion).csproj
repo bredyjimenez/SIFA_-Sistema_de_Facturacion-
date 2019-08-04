@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Menu.aspx" />
-    <Content Include="Nacionalidad.aspx" />
+    <Content Include="Nacionalidades.aspx" />
     <Content Include="Roles.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
@@ -82,12 +82,12 @@
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Nacionalidad.aspx.cs">
-      <DependentUpon>Nacionalidad.aspx</DependentUpon>
+    <Compile Include="Nacionalidades.aspx.cs">
+      <DependentUpon>Nacionalidades.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Nacionalidad.aspx.designer.cs">
-      <DependentUpon>Nacionalidad.aspx</DependentUpon>
+    <Compile Include="Nacionalidades.aspx.designer.cs">
+      <DependentUpon>Nacionalidades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles.aspx.cs">
